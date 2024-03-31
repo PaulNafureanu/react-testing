@@ -6,14 +6,14 @@ interface Props {
 }
 
 export default function FileExplorer({ children }: Props) {
-  const { InnerChild, WrapperComponent } = useLog("FileExplorer", "pink");
+  const { InnerChild, dispatch } = useLog("FileExplorer", "pink");
 
   return (
-    <WrapperComponent>
+    <div style={{ backgroundColor: "pink" }} onClick={dispatch}>
       <Fragment>
         <InnerChild />
         {children}
       </Fragment>
-    </WrapperComponent>
+    </div>
   );
 }

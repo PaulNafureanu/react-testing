@@ -5,10 +5,10 @@ import FileViewer from "./FileViewer";
 import useLog from "./useLog";
 
 export default function App() {
-  const { InnerChild, WrapperComponent } = useLog("App", "yellow");
+  const { InnerChild, dispatch } = useLog("App", "yellow");
 
   return (
-    <WrapperComponent>
+    <div style={{ backgroundColor: "yellow" }} onClick={dispatch}>
       <Fragment>
         <InnerChild />
         <FileExplorer>
@@ -16,6 +16,6 @@ export default function App() {
         </FileExplorer>
         <FileViewer />
       </Fragment>
-    </WrapperComponent>
+    </div>
   );
 }

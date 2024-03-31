@@ -9,10 +9,14 @@ DOMNode.id = "app";
 
 const root = createRoot(DOMNode);
 
-const devMode = (
+const isDev: boolean = true;
+
+const rootComp = isDev ? (
   <StrictMode>
     <App />
   </StrictMode>
+) : (
+  <App />
 );
 
-root.render(devMode);
+root.render(rootComp);

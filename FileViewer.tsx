@@ -2,13 +2,13 @@ import React, { Fragment, useEffect, useState } from "react";
 import useLog from "./useLog";
 
 export default function FileViewer() {
-  const { InnerChild, WrapperComponent } = useLog("FileItem", "greenyellow");
+  const { InnerChild, dispatch } = useLog("FileViewer", "greenyellow");
 
   return (
-    <WrapperComponent>
+    <div style={{ backgroundColor: "greenyellow" }} onClick={dispatch}>
       <Fragment>
         <InnerChild />
       </Fragment>
-    </WrapperComponent>
+    </div>
   );
 }
