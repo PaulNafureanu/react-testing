@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "scripts": {
+    "start": "npx parcel index.html"
+  },
+  "devDependencies": {
+    "@types/css-modules": "^1.0.5",
+    "@types/react": "^18.2.73",
+    "@types/react-dom": "^18.2.23",
+    "parcel": "^2.12.0",
+    "process": "^0.11.10",
+    "typescript": "^5.4.3"
+  }
+}

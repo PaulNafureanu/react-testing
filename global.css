@@ -1,0 +1,10 @@
+html,
+body,
+#app {
+  box-sizing: border-box;
+}
+
+#app * {
+  margin: 25px;
+  padding: 25px;
+}
