@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import useLog from "./useLog";
 
 interface Props {
@@ -6,12 +6,14 @@ interface Props {
 }
 
 export default function FileExplorer({ children }: Props) {
-  const [isOn, dispatch] = useLog("FileExplorer");
+  const { InnerChild, WrapperComponent } = useLog("FileExplorer", "pink");
 
   return (
-    <div style={{ backgroundColor: "pink" }} onClick={dispatch}>
-      File Explorer {" " + isOn}
-      {children}
-    </div>
+    <WrapperComponent>
+      <Fragment>
+        <InnerChild />
+        {children}
+      </Fragment>
+    </WrapperComponent>
   );
 }

@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import useLog from "./useLog";
 
 export default function FileViewer() {
-  const [isOn, dispatch] = useLog("FileViewer");
+  const { InnerChild, WrapperComponent } = useLog("FileItem", "greenyellow");
+
   return (
-    <div style={{ backgroundColor: "greenyellow" }} onClick={dispatch}>
-      File Viewer {" " + isOn}
-    </div>
+    <WrapperComponent>
+      <Fragment>
+        <InnerChild />
+      </Fragment>
+    </WrapperComponent>
   );
 }
